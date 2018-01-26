@@ -49,4 +49,4 @@ config/redis.yml
 config/secrets.yml
 config/solr.yml
 config/devise.yml
-
+config/ldap.yml
