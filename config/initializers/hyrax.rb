@@ -1,6 +1,7 @@
 Hyrax.config do |config|
   Tufts::Curation.setup_models!(configuration: config) do |model|
     model.include(Tufts::Draftable)
+    model.indexer = MiraIndexer
   end
 
   # Register roles that are expected by your implementation.
@@ -34,7 +35,7 @@ Hyrax.config do |config|
   # Options to control the file uploader
   config.uploader = {
     limitConcurrentUploads: 6,
-    maxNumberOfFiles: 100,
+    maxNumberOfFiles: 600,
     maxFileSize: 6.gigabytes
   }
 
