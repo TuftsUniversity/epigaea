@@ -110,6 +110,7 @@ Security/YAMLLoad:
 Lint/UselessAssignment:
   Exclude:
     - app/lib/tufts/contribute_collections.rb
+    - config/routes.rb
 RSpec/LetSetup:
   Exclude:
     - spec/features/create_collection_spec.rb
