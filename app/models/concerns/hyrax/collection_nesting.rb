@@ -3,7 +3,6 @@ module Hyrax
   # This is part of the after update index because it is a potentially very expensive process.
   #
   # @todo Consider extracting the update_index callback to ActiveFedora::Base
-  # rubocop:disable Metrics/BlockLength
   module CollectionNesting
     extend ActiveSupport::Concern
 
@@ -24,20 +23,19 @@ module Hyrax
       def after_update_nested_collection_relationship_indices
         @during_save = false
         reindex_nested_relationships_for(id: id, extent: reindex_extent)
-        # rubocop:disable Style/GuardClause
-        if self.class.to_s == "Collection"
-          children = find_children_of(destroyed_id: id)
-          ids = []
-          children.each do |child|
-            ids << child.id
-          end
+        #  if self.class.to_s == "Collection"
+        #    children = find_children_of(destroyed_id: id)
+        #    ids = []
+        #    children.each do |child|
+        #      ids << child.id
+        #    end
 
-          begin
-            IndexChildrenJob.perform_later(ids)
-          rescue ActiveJob::Uniqueness::JobNotUnique
-            Rails.logger.warn "Tried to queue non-unique IndexChildren job for #{ids}"
-          end
-        end
+        #    begin
+        #      IndexChildrenJob.perform_later(ids)
+        #    rescue ActiveJob::Uniqueness::JobNotUnique
+        #      Rails.logger.warn "Tried to queue non-unique IndexChildren job for #{ids}"
+        #    end
+        #  end
       end
 
       def update_nested_collection_relationship_indices
