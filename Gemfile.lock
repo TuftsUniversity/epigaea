@@ -6,8 +6,8 @@ GIT
 
 GIT
   remote: https://github.com/TuftsUniversity/tufts-curation
-  revision: a602480b8bdd52dadfaa51280bfd26200aaf7647
-  tag: v1.2.1
+  revision: c895d096a34c6a0a6967b4ec0b84f7b9a503af47
+  branch: ead_indexing_2
   specs:
     tufts-curation (0.1.0)
       active-fedora (>= 11.5, <= 12.99)
