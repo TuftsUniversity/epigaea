@@ -142,3 +142,5 @@ Notifications are defined in `app/services/hyrax/workflow`. There are three kind
 The `/contribute` forms deposit works into specific collections. In order to ensure that the expected collections exist, they are 
 created at application deploy time and (if necessary) at deposit time via the `Tufts::ContributeCollections` class. To change the names or
 identifiers of these Collection objects, edit the `app/lib/tufts/contribute_collections.rb` file. To create the collections explicitly, run `rake tufts:create_contribute_collections`.
+
+bump
