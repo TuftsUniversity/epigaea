@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: https://github.com/TuftsUniversity/tufts-curation
-  revision: a31929803a245f399bcdeb6375f6b2668c324cd3
+  revision: c2d9ff178b177d283dfb57977b973a76144aebbb
   branch: ead_indexing_2
   specs:
     tufts-curation (0.1.0)
