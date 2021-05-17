@@ -143,4 +143,4 @@ The `/contribute` forms deposit works into specific collections. In order to ens
 created at application deploy time and (if necessary) at deposit time via the `Tufts::ContributeCollections` class. To change the names or
 identifiers of these Collection objects, edit the `app/lib/tufts/contribute_collections.rb` file. To create the collections explicitly, run `rake tufts:create_contribute_collections`.
 
-bump
+bump, bump
